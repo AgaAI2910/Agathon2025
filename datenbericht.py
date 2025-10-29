@@ -133,7 +133,7 @@ st.markdown("""
 
 
 st.write("")
-image = Image.open(r"logo\AGAthon.png")
+image = Image.open("logo/AGAthon.png")
 left_co, cent_co,last_co = st.columns(3)
 with cent_co:
     st.image(image)
