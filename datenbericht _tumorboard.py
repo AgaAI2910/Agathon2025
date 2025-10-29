@@ -122,7 +122,7 @@ st.markdown("""
 
 
 st.write("")
-image = Image.open(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\AGAthon.png")
+image = Image.open(r"logo\AGAthon.png")
 left_co, cent_co,last_co = st.columns(3)
 with cent_co:
     st.image(image)
@@ -260,11 +260,11 @@ with st.expander("### Datensatz - Tumorboard"):
 
     with st.expander("Fallnummer"):
         st.markdown("Eindeutige Kennung des Falls im Krankenhausinformationssystem.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\Fallnummer_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\Fallnummer_haeufigkeit_mit_nan.png",  use_container_width=True)
 
     with st.expander("Geschlecht"):
         st.markdown("Geschlecht des Patienten.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\G_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\G_haeufigkeit_mit_nan.png",  use_container_width=True)
 
     with st.expander("Datum"):
         st.markdown("Datum an dem die Tumorkonferenz durchgeführt wird")
@@ -275,11 +275,11 @@ with st.expander("### Datensatz - Tumorboard"):
 
     with st.expander("Vorst AdHoct"):
         st.markdown("Kennzeichnet, ob die Vorstellung des Patienten im Tumorboard ad hoc erfolgt ist, also ungeplant und kurzfristig (z. B. bei dringendem Therapiebedarf oder Notfall).")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\Vorst AdHoc_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\Vorst AdHoc_haeufigkeit_mit_nan.png",  use_container_width=True)
     
     with st.expander("Vorst Elektiv"):
         st.markdown("Kennzeichnet, ob die Vorstellung im Tumorboard elektiv erfolgt ist, also geplant und regulär im Rahmen der üblichen Abläufe (z. B. nach Diagnosestellung oder vor Therapieentscheidung).")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\Vorst Elektiv_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\Vorst Elektiv_haeufigkeit_mit_nan.png",  use_container_width=True)
 
     with st.expander("Tumordiagnose"):
         st.markdown("Hauptdiagnose des Tumors (z. B. Mammakarzinom). Grundlage für Therapieentscheidungen.")
@@ -296,7 +296,7 @@ with st.expander("### Datensatz - Tumorboard"):
 
     with st.expander("Staging Klin cT"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\Staging Klin cT_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\Staging Klin cT_haeufigkeit_mit_nan.png",  use_container_width=True)
 
     with st.expander("Staging Klin M"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
@@ -304,27 +304,27 @@ with st.expander("### Datensatz - Tumorboard"):
 
     with st.expander("Staging Klin N"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\Staging Klin N_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\Staging Klin N_haeufigkeit_mit_nan.png",  use_container_width=True)
 
     with st.expander("Staging Klin UICC"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\Staging Klin UICC_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\Staging Klin UICC_haeufigkeit_mit_nan.png",  use_container_width=True)
 
     with st.expander("Staging Path M"):
         st.markdown("Kennzeichnung, ob der Befund außerhalb des Referenzbereichs liegt.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\Staging Path M_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\Staging Path M_haeufigkeit_mit_nan.png",  use_container_width=True)
 
     with st.expander("Staging Path N"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\Staging Path N_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\Staging Path N_haeufigkeit_mit_nan.png",  use_container_width=True)
 
     with st.expander("Staging Path pT"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\Staging Path pT_haeufigkeit_mit_nan.png", use_container_width=True)
+        st.image(r"plots\Staging Path pT_haeufigkeit_mit_nan.png", use_container_width=True)
 
     with st.expander("Staging Path UICC"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\Staging Path UICC_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\Staging Path UICC_haeufigkeit_mit_nan.png",  use_container_width=True)
 
     with st.expander("Nebendiagnosen"):
         st.markdown("Weitere Diagnosen neben der Hauptdiagnose (z. B. Diabetes, Hypertonie).")
@@ -337,19 +337,19 @@ with st.expander("### Datensatz - Tumorboard"):
 
     with st.expander("kurativ"):
         st.markdown("Bisher durchgeführte Therapien (z. B. OP, Chemo, Bestrahlung). Enthält oft Freitext.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\kurativ_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\kurativ_haeufigkeit_mit_nan.png",  use_container_width=True)
 
     with st.expander("palliativ"):
         st.markdown("Bisher durchgeführte Therapien (z. B. OP, Chemo, Bestrahlung). Enthält oft Freitext.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\palliativ_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\palliativ_haeufigkeit_mit_nan.png",  use_container_width=True)
 
     with st.expander("pall Anbindung"):
         st.markdown("Bisher durchgeführte Therapien (z. B. OP, Chemo, Bestrahlung). Enthält oft Freitext.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\pall Anbindung_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image(r"plots\pall Anbindung_haeufigkeit_mit_nan.png",  use_container_width=True)
 
     with st.expander("Alter"):
         st.markdown("Alter des Patienten zum Zeitpunkt der Aufnahme oder zum Zeitpunkt der Tumorboard-Dokumentation. Dieses Feld ist relevant für die Risikoeinschätzung, Therapieplanung und statistische Auswertungen.")
-        st.image(r"C:\Users\Magnus.Senfter\OneDrive - AGAPLESION gAG\Dokumente\Projects\Agathon\Dashboards\plots\Alter_haeufigkeit_mit_nan.png", use_container_width=True)
+        st.image(r"plots\Alter_haeufigkeit_mit_nan.png", use_container_width=True)
 
 
 st.markdown("## Datenschutz")
