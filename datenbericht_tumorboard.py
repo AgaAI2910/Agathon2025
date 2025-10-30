@@ -377,11 +377,11 @@ with st.expander("### Informationen zum Datensatz"):
 
     with st.expander("Fallnummer"):
         st.markdown("Eindeutige Kennung des Falls im Krankenhausinformationssystem.")
-        #st.image("plots/Fallnummer_haeufigkeit_mit_nan.png",  width='stretch')
+        st.image("plots/Fallnummer_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Geschlecht"):
         st.markdown("Geschlecht des Patienten.")
-        #st.image("plots/G_haeufigkeit_mit_nan.png",  width='stretch')
+        st.image("plots/G_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Datum"):
         st.markdown("Datum an dem die Tumorkonferenz durchgeführt wird")
