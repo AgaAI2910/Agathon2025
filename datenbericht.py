@@ -566,8 +566,6 @@ with tab4:
     with st.expander("⚖️ Einheit"):
         st.markdown("Die Einheit gibt an, in welchem Maß der Laborwert gemessen wurde – z. B. mmol/L oder mg/dL. Sie ist essenziell für die korrekte Interpretation und Vergleichbarkeit der Ergebnisse.")
     
-            
-# Weitere Felder hier...
 st.markdown("## Datenschutz")
 st.write("")
 st.markdown("""
