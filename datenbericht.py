@@ -21,6 +21,19 @@ st.set_page_config(
 st.markdown("""
     <style>
             
+         /* Headerbereich */
+        .custom-header {
+            background-color: #00264d; /* Dunkelblau */
+            color: white;
+            padding: 40px 60px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            letter-spacing: 1px;
+          }
+            
         div[data-testid="stTabs"] {
             display: flex;
             justify-content: center; /* Tabs zentrieren */
