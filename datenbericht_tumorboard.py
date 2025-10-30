@@ -38,6 +38,21 @@ st.markdown("""
         h1, h2, h3, h4, h5, h6, p {
             color: white;
         }
+            
+        /* ================================
+           Expander-Breite und Zentrierung
+        ================================= */
+        div[data-testid="stExpander"] {
+            max-width: 1000px;       /* gewünschte maximale Breite */
+            margin: 0 auto;          /* zentriert das Element */
+            width: 100%;             /* passt sich dem Container an */
+        }
+
+        /* Optional: etwas Abstand oben/unten */
+        div[data-testid="stExpander"] {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
 
         /* ================================
            Expander-Styling
