@@ -1,4 +1,4 @@
-Infos zu den Aufgaben des Agathons 2025
+# Infos zu den Aufgaben des Agathons 2025
 Durchgeführt mit technischer Unterstützung von Campana & Schott.
 
 ## Tumorboard 2.0 - KI-gestützte Vorarbeit für Tumorkonferenzen
