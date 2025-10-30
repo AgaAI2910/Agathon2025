@@ -5,6 +5,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from PIL import Image
 import os
+from datetime import datetime, time, timedelta
+import time as time_module
 
 from datetime import datetime, timedelta
 import time
@@ -17,31 +19,43 @@ st.set_page_config(
     layout="wide"
 )
 
+# Automatisches Refresh alle 1 Sekunde
+
 
 st.markdown("""
     <style>
-        
-        
-        
-        
 
+        /* ================================
+           App-Hintergrund und Grundfarben
+        ================================== */
+        body, .stApp {
+            background-color: #001f3f;
+            color: white;
+        }
 
+        header[data-testid="stHeader"] {
+            background-color: #003366 !important;
+            color: white !important;
+        }
 
+        h1, h2, h3, h4, h5, h6, p {
+            color: white;
+        }
 
-        /* Rahmen des Expanders */
+        /* ================================
+           Expander-Styling
+        ================================== */
         div[data-testid="stExpander"] {
             border: 2px solid black;
             border-radius: 8px;
         }
 
-        /* Hintergrundfarbe bei geöffnetem Zustand */
         div[data-testid="stExpander"] > details[open] {
             background-color: #004080;
             color: white;
             padding: 15px;
         }
 
-        /* Titel des Expanders */
         div[data-testid="stExpander"] > details > summary {
             font-size: 20px;
             background-color: #003366;
@@ -50,24 +64,19 @@ st.markdown("""
             border-radius: 8px;
         }
 
-        /* Hintergrund und Schriftfarbe für die gesamte App */
-        body, .stApp {
-            background-color: #001f3f;
-            color: white;
+        div[data-testid="stExpander"] > details[open] > summary {
+            background-color: #003366;
+            color: #3399ff;
+            font-size: 18px;
         }
 
-        /* Header-Bereich anpassen */
-        header[data-testid="stHeader"] {
-            background-color: #003366 !important;
-            color: white !important;
+        div[data-testid="stExpander"] > details[open] {
+            color: #3399ff;
         }
 
-        /* Überschriften und Text */
-        h1, h2, h3, h4, h5, h6, p {
-            color: white;
-        }
-
-        /* Tabs größer und besser sichtbar machen */
+        /* ================================
+           Tabs
+        ================================== */
         div[data-testid="stTabs"] button {
             font-size: 56px;
             padding: 32px 42px;
@@ -87,18 +96,9 @@ st.markdown("""
             font-weight: bold;
         }
 
-        /* Expander-Titel und Inhalt bei geöffnetem Zustand */
-        div[data-testid="stExpander"] > details[open] > summary {
-            background-color: #003366;
-            color: #3399ff;
-            font-size: 18px;
-        }
-
-        div[data-testid="stExpander"] > details[open] {
-            color: #3399ff;
-        }
-
-        /* Hintergrund für h2-Überschriften */
+        /* ================================
+           Überschriften mit Hintergrund
+        ================================== */
         h2 {
             background-color: #004080;
             color: white;
@@ -115,6 +115,57 @@ st.markdown("""
 
         h1 {
             text-align: center;
+        }
+
+        /* =====================================
+           Link-Button: zentriert & moderner Stil
+        ====================================== */
+        div[data-testid="stLinkButton"] {
+            display: flex;
+            justify-content: center;   /* Zentriert den Button horizontal */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        div[data-testid="stLinkButton"] > a {
+            width: 250px;  /* << Breite des Buttons hier anpassen */
+            text-align: center;
+            background: linear-gradient(180deg, #0066cc 0%, #004080 100%) !important;
+            color: white !important;
+            border: 2px solid #66b2ff !important;
+            border-radius: 10px;
+            padding: 12px 0;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-decoration: none !important;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+            transition: all 0.25s ease;
+        }
+
+        /* Hover-Effekt */
+        div[data-testid="stLinkButton"] > a:hover {
+            background: linear-gradient(180deg, #3399ff 0%, #0066cc 100%) !important;
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.6);
+            border-color: #99ccff !important;
+        }
+
+        /* Klick-Feedback */
+        div[data-testid="stLinkButton"] > a:active {
+            transform: translateY(1px);
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Pulsieren zur Auffälligkeit */
+        @keyframes pulseButton {
+            0% { box-shadow: 0 0 0 0 rgba(51, 153, 255, 0.5); }
+            70% { box-shadow: 0 0 0 10px rgba(51, 153, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(51, 153, 255, 0); }
+        }
+
+        div[data-testid="stLinkButton"] > a {
+            animation: pulseButton 3s infinite;
         }
 
     </style>
@@ -184,6 +235,37 @@ with st.expander("### 🗓️ Programmübersicht"):
         .styled-table tr:nth-child(even) {
             background-color: #002244;
         }
+
+        .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh; /* vertikal zentriert */
+    }
+
+    .headline {
+        text-align: center;
+        font-size: 26px;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .countdown-box {
+        font-family: 'Courier New', monospace;
+        font-size: 64px;
+        font-weight: 700;
+        color: #ff3333;              /* Rot */
+        background-color: #000;
+        padding: 16px 36px;
+        border-radius: 12px;
+        letter-spacing: 4px;
+        text-align: center;
+        border: 2px solid #ff3333;
+        box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    }
     </style>
     """
 
@@ -219,7 +301,6 @@ with st.expander("### 🗓️ Programmübersicht"):
             <tr><td>13:30–15:00 Uhr</td><td>Mittagsimbiss und Vernetzen</td></tr>
         </table>
         """, unsafe_allow_html=True)
-st.write("")
 
 st.markdown("## Informationen zur Aufgabe")
 st.write("")
@@ -279,7 +360,7 @@ st.write("")
 
 # Dein Button
 st.link_button(
-    "Link Dokumente Tumorboard",
+    "💡 Link Dokumente Tumorboard",
     url="https://github.com/AgaAI2910/Agathon2025/tree/main/Infos_Tumorboard",
     type="secondary",
     width='stretch'
@@ -335,11 +416,11 @@ with st.expander("### Informationen zum Datensatz"):
 
     with st.expander("Staging Klin cT"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image("plots/Staging Klin cT_haeufigkeit_mit_nan.png",  width='stretch')
+        st.image("plots7Staging Klin cT_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Staging Klin M"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image("plots/Staging Klin M_haeufigkeit_mit_nan.png",  width='stretch')
+        st.image("plots7Staging Klin M_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Staging Klin N"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
