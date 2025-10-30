@@ -387,7 +387,16 @@ with st.expander("### Informationen zum Datensatz"):
         st.markdown("Datum an dem die Tumorkonferenz durchgeführt wird")
 
     with st.expander("Procedere"):
-        st.markdown("Geplantes Vorgehen oder Behandlungsschritte (z. B. OP, Chemotherapie, Nachsorge). Enthält oft Freitext mit hoher Variabilität.")
+        st.markdown(
+            "In diesem Feld wird das von der interdisziplinären Tumorkonferenz empfohlene weitere Vorgehen dokumentiert. "
+            "Es enthält die gemeinsam abgestimmten therapeutischen Maßnahmen, diagnostischen Schritte oder Nachsorgeempfehlungen, "
+            "die sich aus der Besprechung ergeben haben. "
+            "Dazu zählen beispielsweise operative Eingriffe, systemische Therapien (Chemotherapie, Immun- oder zielgerichtete Therapie), "
+            "Strahlentherapie, palliative Maßnahmen oder Beobachtung im Rahmen der Nachsorge. "
+            "Das Feld spiegelt somit das konsentierte Behandlungskonzept wider und dient als Grundlage "
+            "für die weitere klinische Entscheidungsfindung, Dokumentation und Umsetzung der empfohlenen Therapie. "
+            "Da die Empfehlungen häufig individuell angepasst werden, enthält dieses Feld meist Freitext mit variabler Detaillierung."
+        )
         st.markdown("""Beispiel:
                      'Es zeigt sich ein Lokalprogress in der Leber. Im Sinne einer Oligoprogression ergeht die Empfehlung zur Lokaltherapie der Leber und zur Fortführung der subkutanen Therapie. 
                     Allgemeinchirurgische Vorstellung zur Beratung bezüglich Resektion der Lebermetastase, alternativ lokal ablatives Verfahren, wobei aufgrund der Möglichkeit einer erneuten Histologiegewinnung und Tezeptorstatustestung eine OP präferiert wird.'""")
@@ -401,14 +410,32 @@ with st.expander("### Informationen zum Datensatz"):
         st.image("plots/Vorst Elektiv_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Tumordiagnose"):
-        st.markdown("Hauptdiagnose des Tumors (z. B. Mammakarzinom). Grundlage für Therapieentscheidungen.")
+        st.markdown(
+            "In diesem Feld wird die Hauptdiagnose der Tumorerkrankung dokumentiert, "
+            "einschließlich der genauen Bezeichnung des Tumors gemäß ICD- oder ICD-O-Klassifikation "
+            "sowie, falls bekannt, histologischer Typ, Lokalisation und Erstdiagnosedatum. "
+            "Die Tumordiagnose bildet die Grundlage für alle weiteren diagnostischen und therapeutischen Entscheidungen "
+            "und ist zentral für die interdisziplinäre Abstimmung im Tumorboard. "
+            "Darüber hinaus ermöglicht sie die Zuordnung zu Tumorentitäten, "
+            "die statistische Auswertung von Behandlungsdaten sowie die Qualitätssicherung "
+            "im Rahmen der onkologischen Dokumentation."
+        )
         st.markdown("""Beispiel:
                      '\m1Mammakarzinom links, ED 08/2024 \y:551\
                     Stadium bei Erstdiagnose: \m0\c:FF\  \c:-\cT1c, cN0, M0, G \m1
                     Histologie:\m0 Mammakarzinom Typ NST, G2, ER 90%, PR 70%, Her2neu 1+, Ki-67 5%'""")
 
-    with st.expander("Histo Zyto"):
-        st.markdown("Histologische oder zytologische Befunde (z. B. Tumorgrading, Zelltyp). Sehr wichtig für die Klassifikation des Tumors.")
+    with st.expander("Histo / Zyto"):
+        st.markdown(
+            "In diesem Feld werden die histologischen oder zytologischen Befunde der Tumorerkrankung dokumentiert. "
+            "Dazu gehören Angaben zur Tumorart, Zell- und Gewebetypisierung, Differenzierungsgrad (Grading), "
+            "Wachstumsmuster sowie gegebenenfalls molekularpathologische Merkmale. "
+            "Die histo- bzw. zytopathologische Beurteilung stellt die definitive diagnostische Grundlage "
+            "für die Einordnung nach der TNM- und UICC-Klassifikation dar und ist entscheidend "
+            "für die Festlegung des therapeutischen Vorgehens. "
+            "Dieses Feld enthält häufig Freitext mit detaillierten Angaben aus dem pathologischen Befundbericht."
+        )
+
         st.markdown("""
             <div style="
                 background-color: #ffffff;
