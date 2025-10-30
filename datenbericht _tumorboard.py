@@ -4,6 +4,7 @@ import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 from PIL import Image
+import os
 
 from datetime import datetime, timedelta
 import time
@@ -225,30 +226,54 @@ st.write("")
 
 st.write("")
 
-
 st.markdown("""
     <div style="background-color: #ffffff; padding: 40px 60px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-        <h3 style="color: #003366;">🔬 AI LabCheck in der Notaufnahme</h3>
-        
-""", unsafe_allow_html=True)
-st.write("")
-
-
-st.markdown("### Hintergrund Informationen")
-st.write("")
-    
-st.markdown("""
-    <div style="background-color: #ffffff; padding: 40px 60px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-        <h3 style="color: #003366;">📘 Beispieltext</h3>
+        <h3 style="color: #003366;">📘 Tumorboard2.0-  – KI-gestützte Vorarbeit für Tumorkonferenzen</h3>
         <p style="font-size: 18px; line-height: 1.8; color: #333;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            <br><br>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Die Tumorkonferenz ist ein zentrales Instrument in der Behandlung von Krebserkrankungen. 
+            Besprochen werden jedoch nur die zuvor zusammengestellten Informationen. Da Patientenhistorien oft sehr umfangreich sind, kommt es häufig zu doppelten Einträgen oder fehlenden Angaben – beides erschwert die Festlegung der passenden Therapieoption.
+        </p>
+        <p style="font-size: 18px; line-height: 1.8; color: #333;">
+            Ein KI-Tool soll hier unterstützen, indem es die Vorarbeit übernimmt. Der behandelnde Arzt müsste dann nur noch prüfen. 
+            Das Tool soll insbesondere aufzeigen, welche Informationen fehlen und ggf. von anderen Behandler:innen angefordert werden müssen, oder welche Angaben veraltet und durch neuere ersetzt wurden.
+        </p>
+        <p style="font-size: 18px; line-height: 1.8; color: #333;">
+            Eine Empfehlung zur weiteren Behandlung nach Leitlinien wäre der nächste Schritt. Häufig fehlt es an einer soliden Grundlage – für die klassischen „Dr. House“-Szenen, in denen fünf Ärzt:innen tagelang einen Fall analysieren, fehlt in der Realität schlicht die Zeit.
+        </p>
+        <p style="font-size: 18px; line-height: 1.8; color: #333;">
+            Das Raussuchen relevanter Informationen ist eine klassische untergeordnete Aufgabe, die oft unterbrochen oder auf mehrere Personen verteilt wird. 
+            Eine gute Vorarbeit ist entscheidend, denn ohne vollständige Informationen ist eine fundierte Entscheidungsfindung nicht möglich. 
+            Besonders Lücken oder unschlüssige Ergebnisse stellen hier eine große Herausforderung dar.
         </p>
     </div>
 """, unsafe_allow_html=True)
+st.write("")
+
+st.markdown("### Ablauf einer Tumorkonferenz")
+st.markdown("""
+<div style="background-color: #f9f9f9; padding: 30px 50px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+    <p style="font-size: 18px; line-height: 1.8; color: #333;">
+        Tumorkonferenzen sind interdisziplinäre Besprechungen, bei denen Fachärzt:innen verschiedener Disziplinen gemeinsam über die optimale Therapie für Krebspatient:innen entscheiden. 
+        Die Konferenzen finden regelmäßig statt und basieren auf zuvor zusammengestellten Patientendaten.
+    </p>
+    <ul style="font-size: 18px; line-height: 1.8; color: #333;">
+        <li>Vorbereitung durch die fallführende Abteilung</li>
+        <li>Zusammenstellung relevanter Befunde (Radiologie, Pathologie, Labor etc.)</li>
+        <li><strong>Einladung relevanter Fachrichtungen</strong> basierend auf dem konkreten Fall (z. B. Chirurgie, Onkologie, Radiologie, Gynäkologie)</li>
+        <li>Präsentation des Falls im Tumorboard</li>
+        <li>Diskussion und Konsensfindung zur Therapieempfehlung basierend auf Leitlinien</li>
+        <li>Dokumentation der Empfehlung im Tumorprotokoll</li>
+    </ul>
+    <p style="font-size: 18px; line-height: 1.8; color: #333;">
+        Weitere relevante Dokumente für ein besseres Verständnis des Ablaufs eines Tumorboards sind hier zu finden:
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
+
+
+
+
 st.write("")
 
 with st.expander("### Datensatz - Tumorboard"):
