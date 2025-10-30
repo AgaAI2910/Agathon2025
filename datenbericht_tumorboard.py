@@ -436,43 +436,6 @@ with st.expander("### Informationen zum Datensatz"):
             "Dieses Feld enthält häufig Freitext mit detaillierten Angaben aus dem pathologischen Befundbericht."
         )
 
-        st.markdown("""
-            <div style="
-                background-color: #ffffff;
-                color: #000000 !important;
-                padding: 25px 30px;
-                border-radius: 10px;
-                margin-top: 20px;
-                margin-bottom: 20px;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-                font-family: 'Courier New', monospace;
-                white-space: pre-wrap;
-                line-height: 1.6;
-            ">
-            <strong style="color:#003366 !important;">Beispiel:</strong><br><br>
-            \\f:\\m1Befund Pathologie vom 2024-12-05\\m0<br>
-            \\f:12307\\Pathologisch-anatomische Begutachtung<br><br>
-
-            <strong style="color:#003366 !important;">Material/klinische Angaben</strong><br>
-            CT-gesteuerte Punktion Pleura rechts – V.a. Pleuracarcinose DD Mesotheliom – 
-            Z.n. Mammakarzinom, Ösophaguscarcinom und Urothelcarcinom /jd/aj<br><br>
-
-            <strong style="color:#003366 !important;">Makroskopischer Befund</strong><br>
-            Vier bis 15 mm lange Gewebszylinder. Nachträglich blau farbmarkiert.<br><br>
-
-            <strong style="color:#003366 !important;">Pathologisch-Anatomische Diagnose</strong><br>
-            Pleura-PE rechts mit einem mäßig differenzierten, nicht verhornenden Plattenepithelkarzinom (G2).<br>
-            PD-L1 Status: TPS 20, IC 5, CPS 25.<br>
-            Der Befund diskriminiert nicht, sollte ein Plattenepithelkarzinom des Ösophagus vorgelegen haben …<br>
-            Eine Metastase des bekannten Urothel- oder Mammakarzinoms erscheint hier unwahrscheinlich.<br>
-            ICD-O: C38.4 M8070/6<br><br>
-
-            Die gesetzlich vorgeschriebene Meldung an das Krebsregister Hessen wurde von uns vorgenommen.<br>
-            Bitte machen Sie den Patienten auf sein Widerspruchsrecht aufmerksam.
-            </div>
-        """, unsafe_allow_html=True)
-
-
 
     with st.expander("Tumoranamnese"):
         st.markdown(
