@@ -362,7 +362,7 @@ Entwicklung einer **KI-gestützten Anwendung**, die:
 </div>
 """, unsafe_allow_html=True)
 
-with open("plots\zeitstrahl_interaktiv.html", "r", encoding="utf-8") as f:
+with open("plots/zeitstrahl_interaktiv.html", "r", encoding="utf-8") as f:
     html = f.read()
 st.markdown("### Beispielhafter Zeitstrahl einer Fallnummer")
 st.components.v1.html(html, height=500, scrolling=True)
