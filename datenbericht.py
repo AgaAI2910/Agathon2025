@@ -362,12 +362,13 @@ Entwicklung einer **KI-gestützten Anwendung**, die:
 </div>
 """, unsafe_allow_html=True)
 
-
-st.write("")
+with open("plots\zeitstrahl_interaktiv.html", "r", encoding="utf-8") as f:
+    html = f.read()
+st.markdown("### Beispielhafter Zeitstrahl einer Fallnummer")
+st.components.v1.html(html, height=500, scrolling=True)
 
 st.markdown("## 📁Daten für LabAI Check")
 
-import streamlit as st
 st.write("")
 # Tabs erstellen
 tab1, tab2, tab3, tab4 = st.tabs(["📊 Manchester Triage System", "📋 Diagnosen", "⚙️ Laboranforderungen","🧪 Laborwerte",])
@@ -421,7 +422,7 @@ with tab1:
         st.markdown("Der Transportweg zur Klinik (z. B. Rettungswagen, selbstständig) liefert Informationen über die Mobilität und den Zustand des Patienten bei Aufnahme.")
 
     with st.expander("⏰ Entlassungszeit"):
-        st.markdown("Die Uhrzeit der Entlassung dokumentiert den Zeitpunkt, zu dem der Patient das Krankenhaus verlassen hat. Sie ist wichtig für die Abrechnung und Aufenthaltsdauer.")
+        st.markdown("Die Uhrzeit der Entlassung dokumentiert den Zeitpunkt, zu dem der Patient die Notaufnahmeverlassen hat.")
 
     with st.expander("📅 Admin. Fall-Entlassdatum"):
         st.markdown("Das administrative Entlassdatum markiert das Ende des Falls im Krankenhausinformationssystem. Es dient als Basis für statistische und organisatorische Auswertungen.")
