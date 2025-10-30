@@ -20,36 +20,36 @@ st.set_page_config(
 
 st.markdown("""
     <style>
-            
+        
+        
         
         
 
+
+
+
         /* Rahmen des Expanders */
         div[data-testid="stExpander"] {
-            border: 2px solid black; /* Schwarzer Rahmen */
+            border: 2px solid black;
             border-radius: 8px;
         }
 
         /* Hintergrundfarbe bei geöffnetem Zustand */
         div[data-testid="stExpander"] > details[open] {
-            background-color: #004080; /* Blau */
-            color: white; /* Textfarbe */
+            background-color: #004080;
+            color: white;
             padding: 15px;
         }
 
         /* Titel des Expanders */
         div[data-testid="stExpander"] > details > summary {
             font-size: 20px;
-            background-color: #003366; /* Dunkelblau für Titel */
+            background-color: #003366;
             color: white;
             padding: 10px;
             border-radius: 8px;
         }
 
-
-
-
-            
         /* Hintergrund und Schriftfarbe für die gesamte App */
         body, .stApp {
             background-color: #001f3f;
@@ -116,6 +116,7 @@ st.markdown("""
         h1 {
             text-align: center;
         }
+
     </style>
 """, unsafe_allow_html=True)
 
@@ -268,28 +269,41 @@ st.markdown("""
         Weitere relevante Dokumente für ein besseres Verständnis des Ablaufs eines Tumorboards sind hier zu finden:
     </p>
 </div>
+            
 """, unsafe_allow_html=True)
 
+
+
+st.write("")
+
+
+# Dein Button
+st.link_button(
+    "Link Dokumente Tumorboard",
+    url="https://github.com/AgaAI2910/Agathon2025/tree/main/Infos_Tumorboard",
+    type="secondary",
+    width='stretch'
+)
 
 
 
 
 st.write("")
 
-with st.expander("### Datensatz - Tumorboard"):
+with st.expander("### Informationen zum Datensatz"):
     st.markdown("""
-
-    Die Laborwertdaten enthalten alle dokumentierten Befunde, die im Rahmen der stationären oder notfallmäßigen Versorgung erhoben wurden.  
-    Sie bilden die Grundlage für medizinische Entscheidungen, Verlaufskontrollen und diagnostische Einschätzungen im Projekt **Agathon 2025**
+    Die vorliegenden Daten enthalten strukturierte Tumorbögen, die im Rahmen der stationären oder notfallmäßigen Versorgung dokumentiert wurden.
+    Diese Bögen erfassen detaillierte Informationen zur Tumordiagnose, zum Krankheitsverlauf sowie zu therapeutischen Maßnahmen. Sie sind ein zentraler Bestandteil der medizinischen Entscheidungsfindung im Projekt Agathon 2025.
+    Ein besonderer Fokus liegt auf der Diagnose von Mammakarzinomen, die in einer Vielzahl der Fälle dokumentiert sind. Die Tumorbögen enthalten unter anderem folgende Merkmale:
     """)
 
     with st.expander("Fallnummer"):
         st.markdown("Eindeutige Kennung des Falls im Krankenhausinformationssystem.")
-        st.image("plots/Fallnummer_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/Fallnummer_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Geschlecht"):
         st.markdown("Geschlecht des Patienten.")
-        st.image("plots/G_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/G_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Datum"):
         st.markdown("Datum an dem die Tumorkonferenz durchgeführt wird")
@@ -300,11 +314,11 @@ with st.expander("### Datensatz - Tumorboard"):
 
     with st.expander("Vorst AdHoct"):
         st.markdown("Kennzeichnet, ob die Vorstellung des Patienten im Tumorboard ad hoc erfolgt ist, also ungeplant und kurzfristig (z. B. bei dringendem Therapiebedarf oder Notfall).")
-        st.image("plots/Vorst AdHoc_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/Vorst AdHoc_haeufigkeit_mit_nan.png",  width='stretch')
     
     with st.expander("Vorst Elektiv"):
         st.markdown("Kennzeichnet, ob die Vorstellung im Tumorboard elektiv erfolgt ist, also geplant und regulär im Rahmen der üblichen Abläufe (z. B. nach Diagnosestellung oder vor Therapieentscheidung).")
-        st.image("plots/Vorst Elektiv_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/Vorst Elektiv_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Tumordiagnose"):
         st.markdown("Hauptdiagnose des Tumors (z. B. Mammakarzinom). Grundlage für Therapieentscheidungen.")
@@ -321,35 +335,35 @@ with st.expander("### Datensatz - Tumorboard"):
 
     with st.expander("Staging Klin cT"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image("plots/Staging Klin cT_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/Staging Klin cT_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Staging Klin M"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image("plots/Staging Klin M_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/Staging Klin M_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Staging Klin N"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image("plots/Staging Klin N_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/Staging Klin N_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Staging Klin UICC"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image("plots/Staging Klin UICC_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/Staging Klin UICC_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Staging Path M"):
         st.markdown("Kennzeichnung, ob der Befund außerhalb des Referenzbereichs liegt.")
-        st.image("plots/Staging Path M_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/Staging Path M_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Staging Path N"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image("plots/Staging Path N_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/Staging Path N_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Staging Path pT"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image("plots/Staging Path pT_haeufigkeit_mit_nan.png", use_container_width=True)
+        st.image("plots/Staging Path pT_haeufigkeit_mit_nan.png", width='stretch')
 
     with st.expander("Staging Path UICC"):
         st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        st.image("plots/Staging Path UICC_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/Staging Path UICC_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Nebendiagnosen"):
         st.markdown("Weitere Diagnosen neben der Hauptdiagnose (z. B. Diabetes, Hypertonie).")
@@ -362,19 +376,19 @@ with st.expander("### Datensatz - Tumorboard"):
 
     with st.expander("kurativ"):
         st.markdown("Bisher durchgeführte Therapien (z. B. OP, Chemo, Bestrahlung). Enthält oft Freitext.")
-        st.image("plots/kurativ_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/kurativ_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("palliativ"):
         st.markdown("Bisher durchgeführte Therapien (z. B. OP, Chemo, Bestrahlung). Enthält oft Freitext.")
-        st.image("plots/palliativ_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/palliativ_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("pall Anbindung"):
         st.markdown("Bisher durchgeführte Therapien (z. B. OP, Chemo, Bestrahlung). Enthält oft Freitext.")
-        st.image("plots/pall Anbindung_haeufigkeit_mit_nan.png",  use_container_width=True)
+        st.image("plots/pall Anbindung_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Alter"):
         st.markdown("Alter des Patienten zum Zeitpunkt der Aufnahme oder zum Zeitpunkt der Tumorboard-Dokumentation. Dieses Feld ist relevant für die Risikoeinschätzung, Therapieplanung und statistische Auswertungen.")
-        st.image("plots/Alter_haeufigkeit_mit_nan.png", use_container_width=True)
+        st.image("plots/Alter_haeufigkeit_mit_nan.png", width='stretch')
 
 
 st.markdown("## Datenschutz")
