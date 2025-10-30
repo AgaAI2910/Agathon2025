@@ -377,11 +377,11 @@ with st.expander("### Informationen zum Datensatz"):
 
     with st.expander("Fallnummer"):
         st.markdown("Eindeutige Kennung des Falls im Krankenhausinformationssystem. Teilweise gibt es mehrere Tumorbögen pro Fall.")
-        st.image("plots/Fallnummer_haeufigkeit_mit_nan.png",  width='stretch')
+        st.image("plots/Fallnummer_haeufigkeit_mit_nan.png",  width=600)
 
     with st.expander("Geschlecht"):
         st.markdown("Geschlecht des Patienten.")
-        st.image("plots/G_haeufigkeit_mit_nan.png",  width='stretch')
+        st.image("plots/G_haeufigkeit_mit_nan.png",  width=600)
 
     with st.expander("Datum"):
         st.markdown("Datum an dem die Tumorkonferenz durchgeführt wird")
@@ -403,11 +403,11 @@ with st.expander("### Informationen zum Datensatz"):
 
     with st.expander("Vorst AdHoct"):
         st.markdown("Kennzeichnet, ob die Vorstellung des Patienten im Tumorboard ad hoc erfolgt ist, also ungeplant und kurzfristig (z. B. bei dringendem Therapiebedarf oder Notfall).")
-        st.image("plots/Vorst AdHoc_haeufigkeit_mit_nan.png",  width='stretch')
+        st.image("plots/Vorst AdHoc_haeufigkeit_mit_nan.png",  width=600)
     
     with st.expander("Vorst Elektiv"):
         st.markdown("Kennzeichnet, ob die Vorstellung im Tumorboard elektiv erfolgt ist, also geplant und regulär im Rahmen der üblichen Abläufe (z. B. nach Diagnosestellung oder vor Therapieentscheidung).")
-        st.image("plots/Vorst Elektiv_haeufigkeit_mit_nan.png",  width='stretch')
+        st.image("plots/Vorst Elektiv_haeufigkeit_mit_nan.png",  width=600)
 
     with st.expander("Tumordiagnose"):
         st.markdown(
@@ -467,7 +467,7 @@ with st.expander("### Informationen zum Datensatz"):
             "Es dient der Einschätzung der Tumorgröße und des lokalen Wachstums vor einer operativen "
             "oder histologischen Sicherung. Die Einordnung erfolgt gemäß TNM-Klassifikation."
         )
-        st.image("plots/Staging Klin cT_haeufigkeit_mit_nan.png", width='stretch')
+        st.image("plots/Staging Klin cT_haeufigkeit_mit_nan.png", width=600)
 
     with st.expander("Staging Klin N"):
         st.markdown(
@@ -476,7 +476,7 @@ with st.expander("### Informationen zum Datensatz"):
             "Die Angabe dient der Beurteilung der lokalen Tumorausbreitung und hat prognostische Bedeutung "
             "für die Therapieplanung."
         )
-        st.image("plots/Staging Klin N_haeufigkeit_mit_nan.png", width='stretch')
+        st.image("plots/Staging Klin N_haeufigkeit_mit_nan.png",width=600)
 
     with st.expander("Staging Klin M"):
         st.markdown(
@@ -484,7 +484,7 @@ with st.expander("### Informationen zum Datensatz"):
             "die durch bildgebende Verfahren (z. B. CT, MRT, PET-CT) oder andere klinische Befunde erhoben wurden. "
             "Ein cM0 bedeutet, dass keine Metastasen nachweisbar sind, während cM1 auf Fernmetastasen hinweist."
         )
-        st.image("plots/Staging Klin M_haeufigkeit_mit_nan.png", width='stretch')
+        st.image("plots/Staging Klin M_haeufigkeit_mit_nan.png", width=600)
 
     with st.expander("Staging Klin UICC"):
         st.markdown(
@@ -492,7 +492,7 @@ with st.expander("### Informationen zum Datensatz"):
             "Es beschreibt das klinische Gesamtstadium der Tumorerkrankung und dient als Grundlage für "
             "Therapieentscheidungen und prognostische Einschätzungen vor Beginn der Behandlung."
         )
-        st.image("plots/Staging Klin UICC_haeufigkeit_mit_nan.png", width='stretch')
+        st.image("plots/Staging Klin UICC_haeufigkeit_mit_nan.png", width=600)
 
     with st.expander("Staging Path pT"):
         st.markdown(
@@ -500,7 +500,7 @@ with st.expander("### Informationen zum Datensatz"):
             "histopathologischer Untersuchungen nach operativer Entfernung oder Biopsie. "
             "Es stellt die definitive Bestätigung und genauere Beurteilung der lokalen Tumorausbreitung dar."
         )
-        st.image("plots/Staging Path pT_haeufigkeit_mit_nan.png", width='stretch')
+        st.image("plots/Staging Path pT_haeufigkeit_mit_nan.png", width=600)
 
     with st.expander("Staging Path N"):
         st.markdown(
@@ -508,7 +508,7 @@ with st.expander("### Informationen zum Datensatz"):
             "regionärer Lymphknoten auf Grundlage histologischer Befunde. "
             "Diese Information hat hohe prognostische Relevanz und ist entscheidend für die UICC-Stadieneinteilung."
         )
-        st.image("plots/Staging Path N_haeufigkeit_mit_nan.png", width='stretch')
+        st.image("plots/Staging Path N_haeufigkeit_mit_nan.png", width=600)
 
     with st.expander("Staging Path M"):
         st.markdown(
@@ -516,7 +516,7 @@ with st.expander("### Informationen zum Datensatz"):
             "die histologisch gesichert wurden. "
             "Da eine pathologische Bestätigung seltener erfolgt, liegt häufig nur ein klinisches M-Stadium (cM) vor."
         )
-        st.image("plots/Staging Path M_haeufigkeit_mit_nan.png", width='stretch')
+        st.image("plots/Staging Path M_haeufigkeit_mit_nan.png", width=600)
 
     with st.expander("Staging Path UICC"):
         st.markdown(
@@ -525,7 +525,7 @@ with st.expander("### Informationen zum Datensatz"):
             "Es stellt die endgültige stadiengerechte Einordnung der Tumorerkrankung dar und dient als Grundlage "
             "für Prognoseeinschätzung, Therapieplanung und Nachsorge."
         )
-        st.image("plots/Staging Path UICC_haeufigkeit_mit_nan.png", width='stretch')
+        st.image("plots/Staging Path UICC_haeufigkeit_mit_nan.png", width=600)
 
 
     with st.expander("Nebendiagnosen"):
@@ -566,7 +566,7 @@ with st.expander("### Informationen zum Datensatz"):
             "Die Angabe dient der klaren Einordnung des therapeutischen Gesamtkonzepts und unterstützt "
             "die weitere Behandlungsplanung sowie die interdisziplinäre Kommunikation im Tumorboard."
         )
-        st.image("plots/palliativ_haeufigkeit_mit_nan.png", width='stretch')
+        st.image("plots/palliativ_haeufigkeit_mit_nan.png", width=600)
 
 
     with st.expander("Palliativmedizinische Anbindung"):
@@ -579,7 +579,7 @@ with st.expander("### Informationen zum Datensatz"):
             "weiteren Fachbereichen, um die Lebensqualität zu sichern und Behandlungsziele individuell abzustimmen. "
             "Ergänzend kann hier dokumentiert werden, welche Maßnahmen bereits erfolgt sind oder in Planung stehen."
         )
-        st.image("plots/pall Anbindung_haeufigkeit_mit_nan.png",  width='stretch')
+        st.image("plots/pall Anbindung_haeufigkeit_mit_nan.png",  width=600)
 
     with st.expander("Alter"):
         st.markdown(
