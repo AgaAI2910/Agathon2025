@@ -409,30 +409,42 @@ with st.expander("### Informationen zum Datensatz"):
 
     with st.expander("Histo Zyto"):
         st.markdown("Histologische oder zytologische Befunde (z. B. Tumorgrading, Zelltyp). Sehr wichtig für die Klassifikation des Tumors.")
-        st.markdown("""Beispiel:
-                    \f:\m1Befund Pathologie vom 2024-12-05\m0
-                    \f:12307\Pathologisch-anatomische Begutachtung
+        st.markdown("""
+                    <div style="
+                        background-color: #ffffff;
+                        color: #000000;
+                        padding: 25px 30px;
+                        border-radius: 10px;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+                        font-family: 'Courier New', monospace;
+                        white-space: pre-wrap;
+                        line-height: 1.6;
+                    ">
+                    <strong>Beispiel:</strong><br><br>
+                    \\f:\\m1Befund Pathologie vom 2024-12-05\\m0<br>
+                    \\f:12307\\Pathologisch-anatomische Begutachtung<br><br>
 
+                    <strong>Material/klinische Angaben</strong><br>
+                    CT-gesteuerte Punktion Pleura rechts – V.a. Pleuracarcinose DD Mesotheliom – Z.n. Mammakarzinom, Ösophaguscarcinom und Urothelcarcinom /jd/aj<br><br>
 
-                    Material/klinische Angaben
-                    CT-gesteuerte Punktion Pleura rechts - V.a. Pleuracarcinose DD Mesotheliom - Z.n. Mammacarcinom, Ösophaguscarcinom und Urothelcarcinom /jd/aj 
+                    <strong>Makroskopischer Befund</strong><br>
+                    Vier bis 15mm lange Gewebszylinder. Nachträglich blau farbmarkiert.<br><br>
 
-                    Makroskopischer Befund
-                    Vier bis 15mm lange Gewebszylinder. Nachträglich blau farbmarkiert. 
+                    <strong>Pathologisch-Anatomische Diagnose</strong><br>
+                    Pleura-PE rechts mit einem mäßig differenzierten, nicht verhornenden Plattenepithelkarzinom (G2).<br>
+                    PD-L1 Status: TPS 20, IC 5, CPS 25.<br>
+                    Der Befund diskriminiert nicht, sollte ein Plattenepithelkarzinom des Ösophagus vorgelegen haben in der Anamnese, zwischen der Metastase des selbigen oder einem primären Lungenkarzinom.<br>
+                    Sollte eine alleinige Pleurakarzinose vorliegen ohne Lungentumor, wäre hier die Pleurakarzinose eines Ösophaguskarzinoms differenzialdiagnostisch an erster Stelle zu nennen.<br>
+                    Eine Metastase des bekannten Urothelkarzinoms bzw. des bekannten Mammakarzinoms erscheint hier unwahrscheinlich.<br>
+                    ICD-O: C38.4 M8070/6<br><br>
 
-
-                    Pathologisch-Anatomische Diagnose
-                    Pleura-PE rechts mit einem mäßig differenziertes, nicht verhornendes Plattenepithelkarzinom (G2).
-                    PD-L1 Status: TPS 20, IC 5, CPS 25.
-                    Der Befund diskriminiert nicht, sollte ein Plattenepithelkarzinom des Ösophagus vorgelegen haben in der Anamnese, zwischen der Metastase des selbigem oder einem primären Lungenkarzinom. 
-                    Sollte eine alleinige Pleurakarzinose vorliegen ohne Lungentumor wäre hier die Pleurakarzinose eines Ösophaguskarzinoms durchaus differenzialdiagnostisch an erster Stelle zu nennen.
-                    Eine Metastase des bekannten Urothelkarzinoms bzw. des bekannten Mammakarzinoms erscheint hier unwahrscheinlich.
-                    ICD-O: C38.4 M8070/6
-
-                    Die gesetzlich vorgeschriebene Meldung an das Krebsregister Hessen wurde von uns vorgenommen.
+                    Die gesetzlich vorgeschriebene Meldung an das Krebsregister Hessen wurde von uns vorgenommen.<br>
                     Bitte machen Sie den Patienten auf sein Widerspruchsrecht aufmerksam.
+                    </div>
+                """, unsafe_allow_html=True)
 
-                    """)
 
     with st.expander("Tumoranamnese"):
         st.markdown("Angaben zur Tumorvorgeschichte (z. B. frühere Tumoren, Rezidive). Hilft bei Risikoeinschätzung.")
