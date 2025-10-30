@@ -388,7 +388,9 @@ with st.expander("### Informationen zum Datensatz"):
 
     with st.expander("Procedere"):
         st.markdown("Geplantes Vorgehen oder Behandlungsschritte (z. B. OP, Chemotherapie, Nachsorge). Enthält oft Freitext mit hoher Variabilität.")
-        st.markdown("Beispiel: 'Es zeigt sich ein Lokalprogress in der Leber. Im Sinne einer Oligoprogression ergeht die Empfehlung zur Lokaltherapie der Leber und zur Fortführung der subkutanen Therapie. Allgemeinchirurgische Vorstellung zur Beratung bezüglich Resektion der Lebermetastase, alternativ lokal ablatives Verfahren, wobei aufgrund der Möglichkeit einer erneuten Histologiegewinnung und Tezeptorstatustestung eine OP präferiert wird.'")
+        st.markdown("""Beispiel:
+                     'Es zeigt sich ein Lokalprogress in der Leber. Im Sinne einer Oligoprogression ergeht die Empfehlung zur Lokaltherapie der Leber und zur Fortführung der subkutanen Therapie. 
+                    Allgemeinchirurgische Vorstellung zur Beratung bezüglich Resektion der Lebermetastase, alternativ lokal ablatives Verfahren, wobei aufgrund der Möglichkeit einer erneuten Histologiegewinnung und Tezeptorstatustestung eine OP präferiert wird.'""")
 
     with st.expander("Vorst AdHoct"):
         st.markdown("Kennzeichnet, ob die Vorstellung des Patienten im Tumorboard ad hoc erfolgt ist, also ungeplant und kurzfristig (z. B. bei dringendem Therapiebedarf oder Notfall).")
@@ -400,10 +402,36 @@ with st.expander("### Informationen zum Datensatz"):
 
     with st.expander("Tumordiagnose"):
         st.markdown("Hauptdiagnose des Tumors (z. B. Mammakarzinom). Grundlage für Therapieentscheidungen.")
-        st.markdown("Beispiel: '\m1Mammakarzinom links, ED 08/2024 \y:551\Stadium bei Erstdiagnose: \m0\c:FF\  \c:-\cT1c, cN0, M0, G \m1Histologie:\m0 Mammakarzinom Typ NST, G2, ER 90%, PR 70%, Her2neu 1+, Ki-67 5%'")
+        st.markdown("""Beispiel:
+                     '\m1Mammakarzinom links, ED 08/2024 \y:551\
+                    Stadium bei Erstdiagnose: \m0\c:FF\  \c:-\cT1c, cN0, M0, G \m1
+                    Histologie:\m0 Mammakarzinom Typ NST, G2, ER 90%, PR 70%, Her2neu 1+, Ki-67 5%'""")
 
     with st.expander("Histo Zyto"):
         st.markdown("Histologische oder zytologische Befunde (z. B. Tumorgrading, Zelltyp). Sehr wichtig für die Klassifikation des Tumors.")
+        st.markdown("""Beispiel:
+                    \m1Befund Pathologie vom 2024-12-05\m0
+                    \f:12307\Pathologisch-anatomische Begutachtung
+
+
+                    Material/klinische Angaben
+                    CT-gesteuerte Punktion Pleura rechts - V.a. Pleuracarcinose DD Mesotheliom - Z.n. Mammacarcinom, Ösophaguscarcinom und Urothelcarcinom /jd/aj 
+
+                    Makroskopischer Befund
+                    Vier bis 15mm lange Gewebszylinder. Nachträglich blau farbmarkiert. 
+
+
+                    Pathologisch-Anatomische Diagnose
+                    Pleura-PE rechts mit einem mäßig differenziertes, nicht verhornendes Plattenepithelkarzinom (G2).
+                    PD-L1 Status: TPS 20, IC 5, CPS 25.
+                    Der Befund diskriminiert nicht, sollte ein Plattenepithelkarzinom des Ösophagus vorgelegen haben in der Anamnese, zwischen der Metastase des selbigem oder einem primären Lungenkarzinom. Sollte eine alleinige Pleurakarzinose vorliegen ohne Lungentumor wäre hier die Pleurakarzinose eines Ösophaguskarzinoms durchaus differenzialdiagnostisch an erster Stelle zu nennen.
+                    Eine Metastase des bekannten Urothelkarzinoms bzw. des bekannten Mammakarzinoms erscheint hier unwahrscheinlich.
+                    ICD-O: C38.4 M8070/6
+
+                    Die gesetzlich vorgeschriebene Meldung an das Krebsregister Hessen wurde von uns vorgenommen.
+                    Bitte machen Sie den Patienten auf sein Widerspruchsrecht aufmerksam.
+
+                    """)
 
     with st.expander("Tumoranamnese"):
         st.markdown("Angaben zur Tumorvorgeschichte (z. B. frühere Tumoren, Rezidive). Hilft bei Risikoeinschätzung.")
