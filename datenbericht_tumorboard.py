@@ -448,67 +448,155 @@ with st.expander("### Informationen zum Datensatz"):
 
 
     with st.expander("Tumoranamnese"):
-        st.markdown("Angaben zur Tumorvorgeschichte (z. B. frühere Tumoren, Rezidive). Hilft bei Risikoeinschätzung.")
+        st.markdown(
+            "In diesem Feld werden Angaben zur tumorrelevanten Vorgeschichte der Patientin bzw. des Patienten dokumentiert. "
+            "Dazu zählen frühere maligne oder prämaligne Erkrankungen, bereits aufgetretene Rezidive, "
+            "Metastasen, Voroperationen oder abgeschlossene onkologische Therapien. "
+            "Auch Informationen zu Diagnosedatum, Therapieverlauf und bisherigen Behandlungsergebnissen können hier festgehalten werden. "
+            "Die Tumoranamnese ermöglicht eine umfassende Einschätzung des individuellen Krankheitsverlaufs, "
+            "unterstützt die Risikoabschätzung für erneutes Tumorwachstum und dient als Grundlage "
+            "für die interdisziplinäre Therapie- und Nachsorgeplanung."
+        )
 
     with st.expander("Bildgebung"):
-        st.markdown("Ergebnisse bildgebender Verfahren (CT, MRT, PET). Enthält oft Freitext mit Befundbeschreibung.")
+        st.markdown(
+            "Hier werden die Ergebnisse der relevanten bildgebenden Untersuchungen dokumentiert, "
+            "wie z. B. Computertomographie (CT), Magnetresonanztomographie (MRT), Positronen-Emissions-Tomographie (PET-CT) "
+            "oder Sonographie. "
+            "Erfasst werden Art und Datum der Untersuchung, auffällige Befunde, Lokalisationen von Primärtumor, "
+            "Metastasen oder Lymphknotenveränderungen sowie Verlaufskontrollen im Vergleich zu Voruntersuchungen. "
+            "Diese Informationen sind entscheidend für die Beurteilung der Tumorausdehnung, das Staging, "
+            "die Therapieplanung und die Erfolgskontrolle der Behandlung. "
+            "Das Feld enthält häufig Freitext mit detaillierten Befundbeschreibungen und Beurteilungen."
+        )
 
     with st.expander("Staging Klin cT"):
-        st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        #st.image("plots7Staging Klin cT_haeufigkeit_mit_nan.png",  width='stretch')
-
-    with st.expander("Staging Klin M"):
-        st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        #st.image("plots7Staging Klin M_haeufigkeit_mit_nan.png",  width='stretch')
+        st.markdown(
+            "Das klinische T-Stadium (cT) beschreibt die Ausdehnung des Primärtumors basierend auf "
+            "klinischen Untersuchungen, bildgebender Diagnostik und ggf. endoskopischen Befunden. "
+            "Es dient der Einschätzung der Tumorgröße und des lokalen Wachstums vor einer operativen "
+            "oder histologischen Sicherung. Die Einordnung erfolgt gemäß TNM-Klassifikation."
+        )
+        st.image("plots/Staging Klin cT_haeufigkeit_mit_nan.png", width='stretch')
 
     with st.expander("Staging Klin N"):
-        st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        #st.image("plots/Staging Klin N_haeufigkeit_mit_nan.png",  width='stretch')
+        st.markdown(
+            "Das klinische N-Stadium (cN) beschreibt das Vorliegen und Ausmaß regionärer Lymphknotenmetastasen "
+            "auf Basis bildgebender oder klinischer Befunde. "
+            "Die Angabe dient der Beurteilung der lokalen Tumorausbreitung und hat prognostische Bedeutung "
+            "für die Therapieplanung."
+        )
+        st.image("plots/Staging Klin N_haeufigkeit_mit_nan.png", width='stretch')
+
+    with st.expander("Staging Klin M"):
+        st.markdown(
+            "Das klinische M-Stadium (cM) gibt an, ob Hinweise auf Fernmetastasen vorliegen, "
+            "die durch bildgebende Verfahren (z. B. CT, MRT, PET-CT) oder andere klinische Befunde erhoben wurden. "
+            "Ein cM0 bedeutet, dass keine Metastasen nachweisbar sind, während cM1 auf Fernmetastasen hinweist."
+        )
+        st.image("plots/Staging Klin M_haeufigkeit_mit_nan.png", width='stretch')
 
     with st.expander("Staging Klin UICC"):
-        st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        #st.image("plots/Staging Klin UICC_haeufigkeit_mit_nan.png",  width='stretch')
-
-    with st.expander("Staging Path M"):
-        st.markdown("Kennzeichnung, ob der Befund außerhalb des Referenzbereichs liegt.")
-        #st.image("plots/Staging Path M_haeufigkeit_mit_nan.png",  width='stretch')
-
-    with st.expander("Staging Path N"):
-        st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        #st.image("plots/Staging Path N_haeufigkeit_mit_nan.png",  width='stretch')
+        st.markdown(
+            "Das klinische UICC-Stadium fasst die cT-, cN- und cM-Klassifikation gemäß der UICC-TNM-Systematik zusammen. "
+            "Es beschreibt das klinische Gesamtstadium der Tumorerkrankung und dient als Grundlage für "
+            "Therapieentscheidungen und prognostische Einschätzungen vor Beginn der Behandlung."
+        )
+        st.image("plots/Staging Klin UICC_haeufigkeit_mit_nan.png", width='stretch')
 
     with st.expander("Staging Path pT"):
-        st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        #st.image("plots/Staging Path pT_haeufigkeit_mit_nan.png", width='stretch')
+        st.markdown(
+            "Das pathologische T-Stadium (pT) beschreibt die tatsächliche Tumorausdehnung auf Basis "
+            "histopathologischer Untersuchungen nach operativer Entfernung oder Biopsie. "
+            "Es stellt die definitive Bestätigung und genauere Beurteilung der lokalen Tumorausbreitung dar."
+        )
+        st.image("plots/Staging Path pT_haeufigkeit_mit_nan.png", width='stretch')
+
+    with st.expander("Staging Path N"):
+        st.markdown(
+            "Das pathologische N-Stadium (pN) erfasst das Vorliegen und die Anzahl tumorbefallener "
+            "regionärer Lymphknoten auf Grundlage histologischer Befunde. "
+            "Diese Information hat hohe prognostische Relevanz und ist entscheidend für die UICC-Stadieneinteilung."
+        )
+        st.image("plots/Staging Path N_haeufigkeit_mit_nan.png", width='stretch')
+
+    with st.expander("Staging Path M"):
+        st.markdown(
+            "Das pathologische M-Stadium (pM) beschreibt das Vorhandensein von Fernmetastasen, "
+            "die histologisch gesichert wurden. "
+            "Da eine pathologische Bestätigung seltener erfolgt, liegt häufig nur ein klinisches M-Stadium (cM) vor."
+        )
+        st.image("plots/Staging Path M_haeufigkeit_mit_nan.png", width='stretch')
 
     with st.expander("Staging Path UICC"):
-        st.markdown("Normalbereich für den jeweiligen Laborparameter zur Bewertung des Befundwerts.")
-        #st.image("plots/Staging Path UICC_haeufigkeit_mit_nan.png",  width='stretch')
+        st.markdown(
+            "Das pathologische UICC-Stadium wird nach Abschluss der histopathologischen Untersuchung vergeben "
+            "und kombiniert die Parameter pT, pN und pM gemäß der UICC-TNM-Klassifikation. "
+            "Es stellt die endgültige stadiengerechte Einordnung der Tumorerkrankung dar und dient als Grundlage "
+            "für Prognoseeinschätzung, Therapieplanung und Nachsorge."
+        )
+        st.image("plots/Staging Path UICC_haeufigkeit_mit_nan.png", width='stretch')
+
 
     with st.expander("Nebendiagnosen"):
-        st.markdown("Weitere Diagnosen neben der Hauptdiagnose (z. B. Diabetes, Hypertonie).")
+        st.markdown(
+            "Hier werden relevante Begleit- oder Vorerkrankungen der Patientin bzw. des Patienten erfasst, "
+            "die zusätzlich zur Hauptdiagnose bestehen (z. B. Diabetes mellitus, arterielle Hypertonie, "
+            "kardiovaskuläre oder pulmonale Erkrankungen). "
+            "Die Angabe ist wichtig für die ganzheitliche Beurteilung des Gesundheitszustands, "
+            "für die Therapieplanung sowie zur Einschätzung möglicher Risiken und Wechselwirkungen."
+        )
 
-    with st.expander("bisher Therapie"):
-        st.markdown("Bisher durchgeführte Therapien (z. B. OP, Chemo, Bestrahlung). Enthält oft Freitext.")
+    with st.expander("Bisherige Therapie"):
+        st.markdown(
+            "Dieses Feld beschreibt alle bislang durchgeführten Behandlungen im Zusammenhang mit der Tumorerkrankung, "
+            "einschließlich operativer Eingriffe, Chemotherapie, Strahlentherapie, Immun- oder zielgerichteter Therapien. "
+            "Auch unterstützende Maßnahmen, wie Schmerztherapie oder Ernährungsberatung, können hier dokumentiert werden. "
+            "Die Information dient der Nachvollziehbarkeit des bisherigen Therapieverlaufs und der Planung weiterer Schritte."
+        )
 
     with st.expander("Fragestellung"):
-        st.markdown("Bisher durchgeführte Therapien (z. B. OP, Chemo, Bestrahlung). Enthält oft Freitext.")
+        st.markdown(
+            "In diesem Feld wird die konkrete Fragestellung an das Tumorboard dokumentiert, "
+            "z. B. Entscheidung über eine weiterführende Therapie, Einschätzung der Operabilität "
+            "oder Bewertung des Ansprechens auf eine bisherige Behandlung. "
+            "Eine präzise Formulierung erleichtert die interdisziplinäre Diskussion "
+            "und unterstützt eine zielgerichtete Therapieempfehlung."
+        )
 
-    with st.expander("kurativ"):
-        st.markdown("Bisher durchgeführte Therapien (z. B. OP, Chemo, Bestrahlung). Enthält oft Freitext.")
-        #st.image("plots/kurativ_haeufigkeit_mit_nan.png",  width='stretch')
 
-    with st.expander("palliativ"):
-        st.markdown("Bisher durchgeführte Therapien (z. B. OP, Chemo, Bestrahlung). Enthält oft Freitext.")
-        #st.image("plots/palliativ_haeufigkeit_mit_nan.png",  width='stretch')
+    with st.expander("Palliativ / Kurativ (Tumorkonferenz)"):
+        st.markdown(
+            "Dieses Feld gibt an, ob der Fall im Rahmen der Tumorkonferenz unter palliativem oder kurativem "
+            "Behandlungsziel besprochen wurde. "
+            "Ein *kuratives* Vorgehen zielt auf Heilung der Erkrankung ab, beispielsweise durch operative Entfernung "
+            "des Tumors oder andere potenziell heilende Therapien. "
+            "Ein *palliatives* Vorgehen hingegen verfolgt das Ziel, Symptome zu lindern, die Lebensqualität zu erhalten "
+            "und Komplikationen vorzubeugen, wenn eine Heilung nicht mehr möglich ist. "
+            "Die Angabe dient der klaren Einordnung des therapeutischen Gesamtkonzepts und unterstützt "
+            "die weitere Behandlungsplanung sowie die interdisziplinäre Kommunikation im Tumorboard."
+        )
+        st.image("plots/palliativ_haeufigkeit_mit_nan.png", width='stretch')
 
-    with st.expander("pall Anbindung"):
-        st.markdown("Bisher durchgeführte Therapien (z. B. OP, Chemo, Bestrahlung). Enthält oft Freitext.")
-        #st.image("plots/pall Anbindung_haeufigkeit_mit_nan.png",  width='stretch')
+
+    with st.expander("Palliativmedizinische Anbindung"):
+        st.markdown(
+            "Dieses Feld erfasst, ob die Patientin bzw. der Patient aktuell palliativmedizinisch angebunden ist "
+            "oder eine solche Anbindung empfohlen bzw. geplant wird. "
+            "Die Angabe dient der frühzeitigen Erkennung eines möglichen Unterstützungsbedarfs im Rahmen der "
+            "symptomorientierten, ganzheitlichen Betreuung. "
+            "Sie unterstützt die interdisziplinäre Abstimmung zwischen Onkologie, Palliativmedizin, Pflege und "
+            "weiteren Fachbereichen, um die Lebensqualität zu sichern und Behandlungsziele individuell abzustimmen. "
+            "Ergänzend kann hier dokumentiert werden, welche Maßnahmen bereits erfolgt sind oder in Planung stehen."
+        )
+        st.image("plots/pall Anbindung_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Alter"):
-        st.markdown("Alter des Patienten zum Zeitpunkt der Aufnahme oder zum Zeitpunkt der Tumorboard-Dokumentation. Dieses Feld ist relevant für die Risikoeinschätzung, Therapieplanung und statistische Auswertungen.")
-        #st.image("plots/Alter_haeufigkeit_mit_nan.png", width='stretch')
+        st.markdown(
+            "Alter der Patientin bzw. des Patienten zum Zeitpunkt der Aufnahme oder zum Zeitpunkt der Tumorboard-Dokumentation. "
+            "Diese Angabe ist bedeutsam für die individuelle Risikoeinschätzung, die Planung und Auswahl geeigneter Therapieoptionen "
+            "sowie für epidemiologische und statistische Auswertungen im Rahmen der Qualitätssicherung und Forschung."
+        )
 
 
 st.markdown("## Datenschutz")
