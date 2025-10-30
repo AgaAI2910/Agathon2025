@@ -376,7 +376,7 @@ with st.expander("### Informationen zum Datensatz"):
     """)
 
     with st.expander("Fallnummer"):
-        st.markdown("Eindeutige Kennung des Falls im Krankenhausinformationssystem.")
+        st.markdown("Eindeutige Kennung des Falls im Krankenhausinformationssystem. Teilweise gibt es mehrere Tumorbögen pro Fall.")
         st.image("plots/Fallnummer_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Geschlecht"):
@@ -388,19 +388,19 @@ with st.expander("### Informationen zum Datensatz"):
 
     with st.expander("Procedere"):
         st.markdown("Geplantes Vorgehen oder Behandlungsschritte (z. B. OP, Chemotherapie, Nachsorge). Enthält oft Freitext mit hoher Variabilität.")
-        #st.markdown("Beispiel: 'Es zeigt sich ein Lokalprogress in der Leber. Im Sinne einer Oligoprogression ergeht die Empfehlung zur Lokaltherapie der Leber und zur Fortführung der subkutanen Therapie. Allgemeinchirurgische Vorstellung zur Beratung bezüglich Resektion der Lebermetastase, alternativ lokal ablatives Verfahren, wobei aufgrund der Möglichkeit einer erneuten Histologiegewinnung und Tezeptorstatustestung eine OP präferiert wird.'")
+        st.markdown("Beispiel: 'Es zeigt sich ein Lokalprogress in der Leber. Im Sinne einer Oligoprogression ergeht die Empfehlung zur Lokaltherapie der Leber und zur Fortführung der subkutanen Therapie. Allgemeinchirurgische Vorstellung zur Beratung bezüglich Resektion der Lebermetastase, alternativ lokal ablatives Verfahren, wobei aufgrund der Möglichkeit einer erneuten Histologiegewinnung und Tezeptorstatustestung eine OP präferiert wird.'")
 
     with st.expander("Vorst AdHoct"):
         st.markdown("Kennzeichnet, ob die Vorstellung des Patienten im Tumorboard ad hoc erfolgt ist, also ungeplant und kurzfristig (z. B. bei dringendem Therapiebedarf oder Notfall).")
-        #st.image("plots/Vorst AdHoc_haeufigkeit_mit_nan.png",  width='stretch')
+        st.image("plots/Vorst AdHoc_haeufigkeit_mit_nan.png",  width='stretch')
     
     with st.expander("Vorst Elektiv"):
         st.markdown("Kennzeichnet, ob die Vorstellung im Tumorboard elektiv erfolgt ist, also geplant und regulär im Rahmen der üblichen Abläufe (z. B. nach Diagnosestellung oder vor Therapieentscheidung).")
-        #st.image("plots/Vorst Elektiv_haeufigkeit_mit_nan.png",  width='stretch')
+        st.image("plots/Vorst Elektiv_haeufigkeit_mit_nan.png",  width='stretch')
 
     with st.expander("Tumordiagnose"):
         st.markdown("Hauptdiagnose des Tumors (z. B. Mammakarzinom). Grundlage für Therapieentscheidungen.")
-        #st.markdown("Beispiel: '\m1Mammakarzinom links, ED 08/2024 \y:551\Stadium bei Erstdiagnose: \m0\c:FF\  \c:-\cT1c, cN0, M0, G \m1Histologie:\m0 Mammakarzinom Typ NST, G2, ER 90%, PR 70%, Her2neu 1+, Ki-67 5%'")
+        st.markdown("Beispiel: '\m1Mammakarzinom links, ED 08/2024 \y:551\Stadium bei Erstdiagnose: \m0\c:FF\  \c:-\cT1c, cN0, M0, G \m1Histologie:\m0 Mammakarzinom Typ NST, G2, ER 90%, PR 70%, Her2neu 1+, Ki-67 5%'")
 
     with st.expander("Histo Zyto"):
         st.markdown("Histologische oder zytologische Befunde (z. B. Tumorgrading, Zelltyp). Sehr wichtig für die Klassifikation des Tumors.")
