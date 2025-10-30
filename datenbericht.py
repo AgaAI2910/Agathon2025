@@ -4,7 +4,6 @@ import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 from PIL import Image
-
 from datetime import datetime, timedelta
 import time
 
