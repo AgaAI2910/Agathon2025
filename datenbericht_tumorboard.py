@@ -410,7 +410,7 @@ with st.expander("### Informationen zum Datensatz"):
     with st.expander("Histo Zyto"):
         st.markdown("Histologische oder zytologische Befunde (z. B. Tumorgrading, Zelltyp). Sehr wichtig für die Klassifikation des Tumors.")
         st.markdown("""Beispiel:
-                    \m1Befund Pathologie vom 2024-12-05\m0
+                    \f:\m1Befund Pathologie vom 2024-12-05\m0
                     \f:12307\Pathologisch-anatomische Begutachtung
 
 
@@ -424,7 +424,8 @@ with st.expander("### Informationen zum Datensatz"):
                     Pathologisch-Anatomische Diagnose
                     Pleura-PE rechts mit einem mäßig differenziertes, nicht verhornendes Plattenepithelkarzinom (G2).
                     PD-L1 Status: TPS 20, IC 5, CPS 25.
-                    Der Befund diskriminiert nicht, sollte ein Plattenepithelkarzinom des Ösophagus vorgelegen haben in der Anamnese, zwischen der Metastase des selbigem oder einem primären Lungenkarzinom. Sollte eine alleinige Pleurakarzinose vorliegen ohne Lungentumor wäre hier die Pleurakarzinose eines Ösophaguskarzinoms durchaus differenzialdiagnostisch an erster Stelle zu nennen.
+                    Der Befund diskriminiert nicht, sollte ein Plattenepithelkarzinom des Ösophagus vorgelegen haben in der Anamnese, zwischen der Metastase des selbigem oder einem primären Lungenkarzinom. 
+                    Sollte eine alleinige Pleurakarzinose vorliegen ohne Lungentumor wäre hier die Pleurakarzinose eines Ösophaguskarzinoms durchaus differenzialdiagnostisch an erster Stelle zu nennen.
                     Eine Metastase des bekannten Urothelkarzinoms bzw. des bekannten Mammakarzinoms erscheint hier unwahrscheinlich.
                     ICD-O: C38.4 M8070/6
 
